@@ -1,0 +1,60 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+    <Style Selector="Button">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="#7f98c7"/>
+        <Setter Property="CornerRadius" Value="6"/>
+        <Setter Property="Padding" Value="7,2"/>
+        <!--<Setter Property="Margin" Value="5,20"/>-->
+        
+    </Style>
+    <Style Selector="Button:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#98acd0"></Setter>
+        <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+    </Style> 
+   
+        
+    <!--<Style Selector="Button">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Width" Value="75"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Margin" Value="10"></Setter>
+    </Style>-->
+    
+    <Style Selector="Label.Input">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Width" Value="100"></Setter>
+        <Setter Property="Padding" Value="5"></Setter>
+        <Setter Property="Margin" Value="5, 10"></Setter>
+    </Style>
+    
+    <Style Selector="TextBox.Input">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Width" Value="375"></Setter>
+        <Setter Property="Padding" Value="5"></Setter>
+        <Setter Property="Margin" Value="5, 10"></Setter>
+    </Style>
+    
+    <Style Selector="Button.Clear">
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Width" Value="75"></Setter>
+        <Setter Property="Background" Value="Red"></Setter>
+    </Style>
+    
+    <Style Selector="Button.Save">
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Width" Value="75"></Setter>
+        <Setter Property="Background" Value="Green"></Setter>
+        <Setter Property="Margin" Value="50, 0"></Setter>
+    </Style>
+    
+    <Style Selector="StackPanel.Buttons">
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    </Style>
+    
+</Styles> 

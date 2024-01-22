@@ -1,0 +1,134 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Informer_Avalonia.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="600"
+        Width="1000" Height="600"
+        WindowStartupLocation="CenterScreen"
+        x:Class="Informer_Avalonia.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Informer_Avalonia">
+    
+    <Window.Styles>
+        <StyleInclude Source="/MainWindowStyles.axaml"/>
+    </Window.Styles>
+        
+    <Grid RowDefinitions="Auto, Auto, *, Auto, Auto">
+        <!--Header-->
+        <Grid Grid.Row="0" Background="Teal" Height="50" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
+            
+             
+            <Grid.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Background" Value="Transparent"></Setter>
+                    <Setter Property="Width" Value="45"></Setter>
+                </Style> 
+                <Style Selector="Button Image">
+                    <Setter Property="Width" Value="25"></Setter>
+                </Style> 
+                <Style Selector="Button /template/ ContentPresenter">
+                    <Setter Property="Transitions">
+                        <Transitions>
+                            <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2"></TransformOperationsTransition>
+                        </Transitions>
+                    </Setter>
+                </Style> 
+                <Style Selector="Button:pointerover /template/ ContentPresenter">
+                    <Setter Property="Background" Value="Transparent"></Setter>
+                    <Setter Property="RenderTransform" Value="scale(1.11)"></Setter>
+                    <Setter Property="Opacity" Value="0.6"></Setter>
+                </Style>     
+            </Grid.Styles>
+            
+            <!--<Button Grid.Column="0">
+                <Image Source="{SvgImage Assets/Images/Monitor.svg}"></Image>
+            </Button>-->
+            <!--<Button Grid.Column="1">
+                <Image Source="{SvgImage Assets/Images/Lock.svg}"></Image>
+            </Button>-->
+            
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
+                <Label FontSize="24" FontWeight="Black">Informer</Label>
+                <Label FontSize="24">Северная Верфь</Label>
+            </StackPanel>
+            <!--<Button Grid.Column="3">
+                <Image Source="{SvgImage Assets/Images/Export.svg}"></Image>
+            </Button>
+            <Button Grid.Column="4">
+                <Image Source="{SvgImage Assets/Images/Cog.svg}"></Image>
+            </Button>-->
+        </Grid>
+        
+        <!--Menu-->
+        <Grid Grid.Row="1" Margin="8" Height="50" 
+              ColumnDefinitions="Auto, Auto, *, Auto, Auto, Auto, Auto, Auto"
+              Classes="MenuGrid">
+            
+            <Button Grid.Column="0" Margin="0, 0, 8, 0">Главная</Button>
+            <Button Grid.Column="1">Поиск</Button>
+            <Button Grid.Column="3" Margin="0, 0, 8, 0">Войти</Button>
+            <Button Grid.Column="4" Margin="0, 0, 8, 0">Регистрация</Button>
+            <!--<Rectangle Grid.Column="5" Fill="White" Width="30" Margin="0, 0, 8, 0"></Rectangle>
+            <Rectangle Grid.Column="6" Fill="White" Width="30"></Rectangle>-->
+        </Grid>
+        
+        <!--Main-->
+        <Grid Grid.Row="2" ColumnDefinitions="*, 2*">
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Item 1"/>
+                <TextBlock Text="Item 2"/>
+                <TextBlock Text="Item 3"/>
+                <TextBlock Text="Item 4"/>
+                <TextBlock Text="Item 5"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1">
+                <!-- -->
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Login" Classes="Input"/>
+                    <TextBox x:Name="InputFirstName" Classes="Input"/>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Password" Classes="Input" />
+                    <TextBox x:Name="InputLastName" Classes="Input"/>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Classes="Buttons">
+                    <Button x:Name="ButtonClear" Content="_Clear" Classes="Clear" Click="Clear_OnClick"/>
+                    <Button x:Name="ButtonSave" Content="_Save" Classes="Save" Click="Save_OnClick"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        
+        <!--Footer-->
+        <Grid Grid.Row="3" Background="White" Height="50" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
+            <Label Grid.Column="0" Padding="10, 0" Width="60" FontSize="14" FontWeight="Black" VerticalAlignment="Center" HorizontalAlignment="Center">2024</Label>
+            <Rectangle Grid.Column="1" Fill="White" Width="50"></Rectangle>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
+                <Label FontSize="14" FontWeight="Black">Informer</Label>
+                <Label FontSize="14">Северная Верфь</Label>
+            </StackPanel>
+            <Rectangle Grid.Column="3" Fill="White" Width="40"></Rectangle>
+            <Rectangle Grid.Column="4" Fill="White" Width="40"></Rectangle> 
+        </Grid>
+        
+        <!--StatusBar-->
+        <StackPanel Grid.Row="4">
+            <TextBlock x:Name="StatusBar" Text="StatusBar"/>
+        </StackPanel>
+        
+    </Grid>    
+    
+
+    <!--<Design.DataContext>
+        ~1~ This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) @1@
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+
+</Window>
