@@ -9,6 +9,7 @@
         x:Class="Informer_Avalonia.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
+        ExtendClientAreaToDecorationsHint="True"
         Title="Informer_Avalonia">
     
     <Window.Styles>
@@ -75,16 +76,9 @@
         </Grid>
         
         <!--Main-->
-        <Grid Grid.Row="2" ColumnDefinitions="*, 2*">
-            <StackPanel Grid.Column="0">
-                <TextBlock Text="Item 1"/>
-                <TextBlock Text="Item 2"/>
-                <TextBlock Text="Item 3"/>
-                <TextBlock Text="Item 4"/>
-                <TextBlock Text="Item 5"/>
-            </StackPanel>
+        <Grid Grid.Row="2" ColumnDefinitions="*, *">
             
-            <StackPanel Grid.Column="1">
+            <StackPanel Grid.Column="0">
                 <!-- -->
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Login" Classes="Input"/>
@@ -93,13 +87,19 @@
                 
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Password" Classes="Input" />
-                    <TextBox x:Name="InputLastName" Classes="Input"/>
+                    <TextBox x:Name="InputLastName" Classes="Input"  PasswordChar="*" Watermark="Password Box"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal" Classes="Buttons">
                     <Button x:Name="ButtonClear" Content="_Clear" Classes="Clear" Click="Clear_OnClick"/>
                     <Button x:Name="ButtonSave" Content="_Save" Classes="Save" Click="Save_OnClick"/>
                 </StackPanel>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1" Margin="30">
+                <TextBlock x:Name="StatusBar1" Classes="Input"/>
+                <TextBlock x:Name="StatusBar2" Classes="Input"/>
+                <TextBlock x:Name="StatusBar3" Classes="Input"/>
             </StackPanel>
         </Grid>
         
@@ -117,7 +117,9 @@
         
         <!--StatusBar-->
         <StackPanel Grid.Row="4">
-            <TextBlock x:Name="StatusBar" Text="StatusBar"/>
+            
+            
+            <!--<TextBlock Text="{Binding Greeting}"></TextBlock>-->
         </StackPanel>
         
     </Grid>    

@@ -1,3 +1,4 @@
+C:\Users\10390\.nuget\packages\aspose.email\23.12.0\lib\net6.0\Aspose.Email.dll
 C:\Users\10390\.nuget\packages\avalonia\11.0.7\ref\net6.0\Avalonia.Base.dll
 C:\Users\10390\.nuget\packages\avalonia.controls.colorpicker\11.0.6\lib\net6.0\Avalonia.Controls.ColorPicker.dll
 C:\Users\10390\.nuget\packages\avalonia.controls.datagrid\11.0.6\lib\net6.0\Avalonia.Controls.DataGrid.dll
@@ -23,9 +24,11 @@ C:\Users\10390\.nuget\packages\avalonia.themes.fluent\11.0.6\lib\net6.0\Avalonia
 C:\Users\10390\.nuget\packages\avalonia.themes.simple\11.0.6\lib\net6.0\Avalonia.Themes.Simple.dll
 C:\Users\10390\.nuget\packages\avalonia.win32\11.0.7\lib\net6.0\Avalonia.Win32.dll
 C:\Users\10390\.nuget\packages\avalonia.x11\11.0.7\lib\net6.0\Avalonia.X11.dll
+C:\Users\10390\.nuget\packages\bouncycastle.cryptography\2.2.1\lib\net6.0\BouncyCastle.Cryptography.dll
 C:\Users\10390\.nuget\packages\dynamicdata\7.9.5\lib\net6.0\DynamicData.dll
 C:\Users\10390\.nuget\packages\excss\4.2.3\lib\net7.0\ExCSS.dll
 C:\Users\10390\.nuget\packages\harfbuzzsharp\7.3.0\lib\net6.0\HarfBuzzSharp.dll
+C:\Users\10390\.nuget\packages\mailkit\4.3.0\lib\net6.0\MailKit.dll
 C:\Users\10390\.nuget\packages\microcom.runtime\0.11.0\lib\net5.0\MicroCom.Runtime.dll
 C:\Users\10390\.nuget\packages\microsoft.codeanalysis.csharp\3.8.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\10390\.nuget\packages\microsoft.codeanalysis.csharp.scripting\3.8.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Scripting.dll
@@ -37,6 +40,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\Microso
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\Microsoft.Win32.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\Microsoft.Win32.Registry.dll
 C:\Users\10390\.nuget\packages\microsoft.win32.systemevents\6.0.0\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\10390\.nuget\packages\mimekit\4.3.0\lib\net6.0\MimeKit.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\mscorlib.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\netstandard.dll
 C:\Users\10390\.nuget\packages\reactiveui\18.3.1\lib\net6.0\ReactiveUI.dll
@@ -166,6 +170,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\System.
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\System.Security.Cryptography.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\System.Security.Cryptography.Encoding.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\System.Security.Cryptography.OpenSsl.dll
+C:\Users\10390\.nuget\packages\system.security.cryptography.pkcs\7.0.3\lib\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\System.Security.Cryptography.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\System.Security.Cryptography.X509Certificates.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.1\ref\net8.0\System.Security.dll

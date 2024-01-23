@@ -141,3 +141,10 @@ C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\obj\Debu
 C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\obj\Debug\net8.0\Informer_Avalonia.csproj.CopyComplete
 C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\obj\Debug\net8.0\Informer_Avalonia.genruntimeconfig.cache
 C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\obj\Debug\net8.0\ref\Informer_Avalonia.dll
+C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\obj\Debug\net8.0\Informer_Avalonia.sourcelink.json
+C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\bin\Debug\net8.0\MailKit.dll
+C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\bin\Debug\net8.0\MimeKit.dll
+C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\10390\Desktop\TRY\Avalonia\Informer_Avalonia\Informer_Avalonia\bin\Debug\net8.0\Aspose.Email.dll

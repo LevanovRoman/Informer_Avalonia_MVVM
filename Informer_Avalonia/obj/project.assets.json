@@ -2,6 +2,23 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Aspose.Email/23.12.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "7.0.3",
+          "System.Text.Encoding.CodePages": "5.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Aspose.Email.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Aspose.Email.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Avalonia/11.0.7": {
         "type": "package",
         "dependencies": {
@@ -369,6 +386,19 @@
           }
         }
       },
+      "BouncyCastle.Cryptography/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DynamicData/7.9.5": {
         "type": "package",
         "dependencies": {
@@ -489,6 +519,22 @@
           "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
             "assetType": "native",
             "rid": "win-x86"
+          }
+        }
+      },
+      "MailKit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "4.3.0"
+        },
+        "compile": {
+          "lib/net6.0/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
           }
         }
       },
@@ -773,7 +819,7 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.2": {
+      "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -810,6 +856,25 @@
           "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "assetType": "runtime",
             "rid": "win"
+          }
+        }
+      },
+      "MimeKit/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.2.1",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Security.Cryptography.Pkcs": "7.0.3",
+          "System.Text.Encoding.CodePages": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
           }
         }
       },
@@ -1111,6 +1176,22 @@
           "lib/netstandard1.3/System.Dynamic.Runtime.dll": {}
         }
       },
+      "System.Formats.Asn1/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "System.Globalization/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1403,17 +1484,20 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Runtime.Extensions/4.3.0": {
@@ -1456,6 +1540,31 @@
           "ref/netcoreapp1.1/_._": {}
         }
       },
+      "System.Security.Cryptography.Pkcs/7.0.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Formats.Asn1": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1469,20 +1578,23 @@
           }
         }
       },
-      "System.Text.Encoding.CodePages/4.5.1": {
+      "System.Text.Encoding.CodePages/7.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.1.2",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
-        },
         "compile": {
-          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+          "lib/net7.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+          "lib/net7.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1540,6 +1652,39 @@
     }
   },
   "libraries": {
+    "Aspose.Email/23.12.0": {
+      "sha512": "PE45YY2JiisDc93KmLo6BKd4P9YoMXNtq8ZShzGhIJq5oiMf91584ynoj5/CWs24S/zmyuYXhW/+7eyrHnM1Xw==",
+      "type": "package",
+      "path": "aspose.email/23.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Help/Aspose.Email.chm",
+        "Images/aspose_email-for-net.png",
+        "License/Aspose_End-User-License-Agreement.txt",
+        "License/Thirdpartylicenses.Aspose.Email.for.NET.pdf",
+        "aspose.email.23.12.0.nupkg.sha512",
+        "aspose.email.nuspec",
+        "lib/net20/Aspose.Email.dll",
+        "lib/net20/Aspose.Email.xml",
+        "lib/net35-client/Aspose.Email.dll",
+        "lib/net35-client/Aspose.Email.xml",
+        "lib/net35/Aspose.Email.dll",
+        "lib/net35/Aspose.Email.xml",
+        "lib/net40-client/Aspose.Email.dll",
+        "lib/net40-client/Aspose.Email.xml",
+        "lib/net40/Aspose.Email.dll",
+        "lib/net40/Aspose.Email.xml",
+        "lib/net45/Aspose.Email.dll",
+        "lib/net45/Aspose.Email.xml",
+        "lib/net5.0/Aspose.Email.dll",
+        "lib/net5.0/Aspose.Email.xml",
+        "lib/net6.0/Aspose.Email.dll",
+        "lib/net6.0/Aspose.Email.xml",
+        "lib/netstandard2.0/Aspose.Email.dll",
+        "lib/netstandard2.0/Aspose.Email.xml"
+      ]
+    },
     "Avalonia/11.0.7": {
       "sha512": "TQYVRzZgv7lWlJzLfIQgAEQpUzhNJr2Bhu609H858FdpzR1x5v1M2N25VxcmbqsvSUKfrCgJRAmfknzPrYG6PQ==",
       "type": "package",
@@ -2005,6 +2150,26 @@
         "lib/netstandard2.0/Avalonia.X11.xml"
       ]
     },
+    "BouncyCastle.Cryptography/2.2.1": {
+      "sha512": "A6Zr52zVqJKt18ZBsTnX0qhG0kwIQftVAjLmszmkiR/trSp8H+xj1gUOzk7XHwaKgyREMSV1v9XaKrBUeIOdvQ==",
+      "type": "package",
+      "path": "bouncycastle.cryptography/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "bouncycastle.cryptography.2.2.1.nupkg.sha512",
+        "bouncycastle.cryptography.nuspec",
+        "lib/net461/BouncyCastle.Cryptography.dll",
+        "lib/net461/BouncyCastle.Cryptography.xml",
+        "lib/net6.0/BouncyCastle.Cryptography.dll",
+        "lib/net6.0/BouncyCastle.Cryptography.xml",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
+        "packageIcon.png"
+      ]
+    },
     "DynamicData/7.9.5": {
       "sha512": "xFwVha7o3qUtVYxco5p+7Urcztc/m1gmaEUxOG0i7LNe+vfCfyb0ECAsT2FLm3zOPHb0g8s9qVu5LfPKfRNVng==",
       "type": "package",
@@ -2213,6 +2378,46 @@
         "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
         "runtimes/win-x64/native/libHarfBuzzSharp.dll",
         "runtimes/win-x86/native/libHarfBuzzSharp.dll"
+      ]
+    },
+    "MailKit/4.3.0": {
+      "sha512": "jVmB3Nr0JpqhyMiXOGWMin+QvRKpucGpSFBCav9dG6jEJPdBV+yp1RHVpKzxZPfT+0adaBuZlMFdbIciZo1EWA==",
+      "type": "package",
+      "path": "mailkit/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/ExchangeOAuth2.md",
+        "docs/FAQ.md",
+        "docs/GMailOAuth2.md",
+        "docs/README.md",
+        "icons/mailkit-50.png",
+        "lib/net462/MailKit.dll",
+        "lib/net462/MailKit.dll.config",
+        "lib/net462/MailKit.pdb",
+        "lib/net462/MailKit.xml",
+        "lib/net47/MailKit.dll",
+        "lib/net47/MailKit.dll.config",
+        "lib/net47/MailKit.pdb",
+        "lib/net47/MailKit.xml",
+        "lib/net48/MailKit.dll",
+        "lib/net48/MailKit.dll.config",
+        "lib/net48/MailKit.pdb",
+        "lib/net48/MailKit.xml",
+        "lib/net6.0/MailKit.dll",
+        "lib/net6.0/MailKit.dll.config",
+        "lib/net6.0/MailKit.pdb",
+        "lib/net6.0/MailKit.xml",
+        "lib/netstandard2.0/MailKit.dll",
+        "lib/netstandard2.0/MailKit.dll.config",
+        "lib/netstandard2.0/MailKit.pdb",
+        "lib/netstandard2.0/MailKit.xml",
+        "lib/netstandard2.1/MailKit.dll",
+        "lib/netstandard2.1/MailKit.dll.config",
+        "lib/netstandard2.1/MailKit.pdb",
+        "lib/netstandard2.1/MailKit.xml",
+        "mailkit.4.3.0.nupkg.sha512",
+        "mailkit.nuspec"
       ]
     },
     "MicroCom.Runtime/0.11.0": {
@@ -2568,21 +2773,19 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.NETCore.Platforms/2.1.2": {
-      "sha512": "mOJy3M0UN+LUG21dLGMxaWZEP6xYpQEpLuvuEQBaownaX4YuhH6NmNUlN9si+vNkAS6dwJ//N1O4DmLf2CikVg==",
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/2.1.2",
+      "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
-        "runtime.json",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtime.json"
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
@@ -2627,6 +2830,44 @@
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "MimeKit/4.3.0": {
+      "sha512": "39KDXuERDy5VmHIn7NnCWvIVp/Ar4qnxZWg9m06DfRqDbW1B6zFv9o3Tdoa4CCu71tE/0SRqRCN5Z+bbffw6uw==",
+      "type": "package",
+      "path": "mimekit/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/FAQ.md",
+        "docs/README.md",
+        "icons/mimekit-50.png",
+        "lib/net462/MimeKit.dll",
+        "lib/net462/MimeKit.dll.config",
+        "lib/net462/MimeKit.pdb",
+        "lib/net462/MimeKit.xml",
+        "lib/net47/MimeKit.dll",
+        "lib/net47/MimeKit.dll.config",
+        "lib/net47/MimeKit.pdb",
+        "lib/net47/MimeKit.xml",
+        "lib/net48/MimeKit.dll",
+        "lib/net48/MimeKit.dll.config",
+        "lib/net48/MimeKit.pdb",
+        "lib/net48/MimeKit.xml",
+        "lib/net6.0/MimeKit.dll",
+        "lib/net6.0/MimeKit.dll.config",
+        "lib/net6.0/MimeKit.pdb",
+        "lib/net6.0/MimeKit.xml",
+        "lib/netstandard2.0/MimeKit.dll",
+        "lib/netstandard2.0/MimeKit.dll.config",
+        "lib/netstandard2.0/MimeKit.pdb",
+        "lib/netstandard2.0/MimeKit.xml",
+        "lib/netstandard2.1/MimeKit.dll",
+        "lib/netstandard2.1/MimeKit.dll.config",
+        "lib/netstandard2.1/MimeKit.pdb",
+        "lib/netstandard2.1/MimeKit.xml",
+        "mimekit.4.3.0.nupkg.sha512",
+        "mimekit.nuspec"
       ]
     },
     "ReactiveUI/18.3.1": {
@@ -3312,6 +3553,33 @@
         "runtimes/aot/lib/netcore50/System.Dynamic.Runtime.dll",
         "system.dynamic.runtime.4.3.0.nupkg.sha512",
         "system.dynamic.runtime.nuspec"
+      ]
+    },
+    "System.Formats.Asn1/7.0.0": {
+      "sha512": "+nfpV0afLmvJW8+pLlHxRjz3oZJw4fkyU9MMEaMhCsHi/SN9bGF9q79ROubDiwTiCHezmK0uCWkPP7tGFP/4yg==",
+      "type": "package",
+      "path": "system.formats.asn1/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Formats.Asn1.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Formats.Asn1.targets",
+        "lib/net462/System.Formats.Asn1.dll",
+        "lib/net462/System.Formats.Asn1.xml",
+        "lib/net6.0/System.Formats.Asn1.dll",
+        "lib/net6.0/System.Formats.Asn1.xml",
+        "lib/net7.0/System.Formats.Asn1.dll",
+        "lib/net7.0/System.Formats.Asn1.xml",
+        "lib/netstandard2.0/System.Formats.Asn1.dll",
+        "lib/netstandard2.0/System.Formats.Asn1.xml",
+        "system.formats.asn1.7.0.0.nupkg.sha512",
+        "system.formats.asn1.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -4361,34 +4629,29 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.7.1": {
-      "sha512": "zOHkQmzPCn5zm/BH+cxC1XbUS3P4Yoi3xzW7eRgVpDR2tPGSzyMZ17Ig1iRkfJuY0nhxkQQde8pgePNiA7z7TQ==",
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.7.1",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
-        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Runtime.Extensions/4.3.0": {
@@ -4603,6 +4866,39 @@
         "system.runtime.interopservices.nuspec"
       ]
     },
+    "System.Security.Cryptography.Pkcs/7.0.3": {
+      "sha512": "yhwEHH5Gzl/VoADrXtt5XC95OFoSjNSWLHNutE7GwdOgefZVRvEXRSooSpL8HHm3qmdd9epqzsWg28UJemt22w==",
+      "type": "package",
+      "path": "system.security.cryptography.pkcs/7.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.Pkcs.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
+        "lib/net462/System.Security.Cryptography.Pkcs.dll",
+        "lib/net462/System.Security.Cryptography.Pkcs.xml",
+        "lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net6.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/net7.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net7.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.xml",
+        "system.security.cryptography.pkcs.7.0.3.nupkg.sha512",
+        "system.security.cryptography.pkcs.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -4671,39 +4967,41 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/4.5.1": {
-      "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
+    "System.Text.Encoding.CodePages/7.0.0": {
+      "sha512": "LSyCblMpvOe0N3E+8e0skHcrIhgV2huaNcjUUEa8hRtgEAm36aGkRoC8Jxlb6Ra6GSfF29ftduPNywin8XolzQ==",
       "type": "package",
-      "path": "system.text.encoding.codepages/4.5.1",
+      "path": "system.text.encoding.codepages/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Text.Encoding.CodePages.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net46/System.Text.Encoding.CodePages.dll",
-        "lib/net461/System.Text.Encoding.CodePages.dll",
-        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/net462/System.Text.Encoding.CodePages.dll",
+        "lib/net462/System.Text.Encoding.CodePages.xml",
+        "lib/net6.0/System.Text.Encoding.CodePages.dll",
+        "lib/net6.0/System.Text.Encoding.CodePages.xml",
+        "lib/net7.0/System.Text.Encoding.CodePages.dll",
+        "lib/net7.0/System.Text.Encoding.CodePages.xml",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "system.text.encoding.codepages.4.5.1.nupkg.sha512",
+        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.7.0.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Threading/4.3.0": {
@@ -4899,13 +5197,15 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Aspose.Email >= 23.12.0",
       "Avalonia >= 11.0.7",
       "Avalonia.Desktop >= 11.0.7",
       "Avalonia.Diagnostics >= 11.0.6",
       "Avalonia.Fonts.Inter >= 11.0.6",
       "Avalonia.ReactiveUI >= 11.0.7",
       "Avalonia.Svg.Skia >= 11.0.0.10",
-      "Avalonia.Themes.Fluent >= 11.0.6"
+      "Avalonia.Themes.Fluent >= 11.0.6",
+      "MailKit >= 4.3.0"
     ]
   },
   "packageFolders": {
@@ -4945,6 +5245,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Aspose.Email": {
+            "target": "Package",
+            "version": "[23.12.0, )"
+          },
           "Avalonia": {
             "target": "Package",
             "version": "[11.0.7, )"
@@ -4972,6 +5276,10 @@
           "Avalonia.Themes.Fluent": {
             "target": "Package",
             "version": "[11.0.6, )"
+          },
+          "MailKit": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           }
         },
         "imports": [
