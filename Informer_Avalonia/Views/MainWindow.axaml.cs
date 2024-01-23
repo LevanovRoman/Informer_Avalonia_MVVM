@@ -64,18 +64,33 @@ public partial class MainWindow : Window
                     
                     var inbox = client.Inbox;
                     inbox.Open (FolderAccess.ReadOnly);
+                    
+                    StatusBar1.Text = $"Всего сообщений: {inbox.Count}\nНепрочитанных: {inbox.Recent}";
+                    
+                    var message1 = inbox.GetMessage (inbox.Count-1);
+                    StatusBar2.Text = $"Отправитель: {message1.From}\nТема: {message1.Subject}\nДата: {message1.Date}";
+                    
+                    /*var message2 = inbox.GetMessage (inbox.Count-2);
+                    StatusBar4.Text = $"Отправитель: {message2.From}\nТема: {message2.Subject}\nДата: {message2.Date}";
+                    
+                    var message3 = inbox.GetMessage (inbox.Count-3);
+                    StatusBar5.Text = $"Отправитель: {message3.From}\nТема: {message3.Subject}\nДата: {message3.Date}";*/
+                    
+                    /*var message3 = inbox.GetMessage (inbox.Count-3);
+                    StatusBar9.Text = $"Отправитель: {message3.From}";
+                    StatusBar10.Text = $"Тема: {message3.Subject}";
+                    StatusBar11.Text = $"Дата: {message3.Date}";*/
 
-                    Console.WriteLine ("Total messages: {0}", inbox.Count);
-                    Console.WriteLine ("Recent messages: {0}", inbox.Recent);
-
+                    string result = "";
                     for (int i = inbox.Count-1; i > inbox.Count - 4 ; i--) {
                         var message = inbox.GetMessage (i);
-                        StatusBar1.Text = $"Отправитель: {message.From}";
-                        StatusBar2.Text = $"Тема: {message.Subject}";
-                        StatusBar3.Text = $"Дата: {message.Date}";
+                        result += $"Отправитель: {message.From}\nТема: {message.Subject}\nДата: {message.Date}\n\n";
                     }
+
+                    StatusBar3.Text = result;
                     client.Disconnect (true);
                 }
+                
                 catch ( MailKit.Security.AuthenticationException e)
                 {
                     StatusBar1.Text = $"Incorrect: name: {name};  password: {password}";

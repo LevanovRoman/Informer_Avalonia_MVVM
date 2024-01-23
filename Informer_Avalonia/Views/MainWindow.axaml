@@ -97,9 +97,47 @@
             </StackPanel>
             
             <StackPanel Grid.Column="1" Margin="30">
-                <TextBlock x:Name="StatusBar1" Classes="Input"/>
-                <TextBlock x:Name="StatusBar2" Classes="Input"/>
-                <TextBlock x:Name="StatusBar3" Classes="Input"/>
+                <Border Background="Gainsboro"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Padding="10" Margin="10">
+                    <TextBlock x:Name="StatusBar1" Classes="Input"/>
+                </Border>
+                
+                <Border Background="Gainsboro"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Padding="10" Margin="10">
+                    <TextBlock x:Name="StatusBar2" Classes="Input"/>
+                </Border>
+                <Border Background="Gainsboro"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Padding="10" Margin="10">
+                    <TextBlock x:Name="StatusBar3" Classes="Input"/>
+                </Border>
+                <!--<Border Background="Gainsboro"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Padding="10" Margin="10">
+                    <TextBlock x:Name="StatusBar4" Classes="Input"/>
+                </Border>
+                <Border Background="Gainsboro"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Padding="10" Margin="10">
+                    <TextBlock x:Name="StatusBar5" Classes="Input"/>
+                </Border>-->
+                
+                <!--<TextBlock x:Name="StatusBar3" Classes="Input" TextDecorations="Underline"/>
+                <TextBlock x:Name="StatusBar4" Classes="Input"/>
+                <TextBlock x:Name="StatusBar5" Classes="Input"/>-->
+                
             </StackPanel>
         </Grid>
         
